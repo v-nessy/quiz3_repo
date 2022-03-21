@@ -20,21 +20,23 @@
         	arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
         	renderer="antialias: true; alpha: true">
 
-			<!-- Include this script -->
-			<script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-			<!-- Then we can add the following to the a-scene -->
+			<!-- text that faces the camera -->
+			<!-- <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
 			<a-camera gps-camera='simulateLatitude: 51.049; simulateLongitude: -0.723' rotation-reader></a-camera>
 			<a-text value="heyyyyyyyyyyyyyyyyyyyyy" look-at="[gps-camera]" scale="40 40 40" gps-entity-place="latitude: 51.0491; longitude: -0.723;"></a-text>
-			<a-box position="0 0 0" rotation="0 45 0" color="#4CC3D9"></a-box>
+			<a-box position="0 0 0" rotation="0 45 0" color="#4CC3D9" gps-entity-place="latitude: 51.0491; longitude: -0.723;"></a-box> -->
 
 			<!--Taken from "location-based.html" example-->
 			<a-assets>
-				<a-asset-item id="minecraft apple" src="./assets/models/scene.gltf">
+				<a-asset-item id="sword" src="./assets/models/scene.gltf">
 			</a-assets>
-			<a-entity gltf-model="minecraft apple" 
-				  rotation="0 180 0" scale="0.15 0.15 0.15" position="-1 1 -3"
-				  gps-entity-place="longitude: -79; latitude: 43;" 
+			
+			<a-entity gltf-model="#sword" 
+				  rotation="0 180 0" scale="1.0 1.0 1.0" position="-1 1 -3"
+				  gps-entity-place="longitude: 43.89460279932545; latitude: -79.22559272571354;" 
 				  animation-mixer="loop: repeat"/>
+  		
+			<a-camera gps-camera rotation-reader></a-camera>
 		</a-scene>
 	</body>
 </html>

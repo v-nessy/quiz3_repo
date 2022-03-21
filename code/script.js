@@ -1,15 +1,15 @@
-window.onload = () => {
-     let places = staticLoadPlaces();
-     renderPlaces(places);
+window.onload = () => { //function tells the window what to do on load
+     let places = staticLoadPlaces(); //sets the variable "places" to the function "staticLoadPlaces()"
+     renderPlaces(places); //applies the function "renderPlaces()" to the variable "places"
 };
 
-function staticLoadPlaces() {
-    return [
+function staticLoadPlaces() { //define a new function
+    return [ //returns any specified expressions within square brackets
         {
-            name: 'MyModel',
-            location: {
-                lat: <your-latitude>,
-                lng: <your-longitude>,
+            name: 'MyModel', //stores the string 'MyModel' for name key
+            location: { //sets values for location
+                lat: 43.89623966685822, //sets value for latitude
+                lng: -79.22635749135085, //sets value for longitude
             }
         },
     ];

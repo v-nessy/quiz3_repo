@@ -21,10 +21,10 @@
         	renderer="antialias: true; alpha: true">
 
 			<!-- text that faces the camera -->
-			<!-- <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+			<script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
 			<a-camera gps-camera='simulateLatitude: 51.049; simulateLongitude: -0.723' rotation-reader></a-camera>
 			<a-text value="heyyyyyyyyyyyyyyyyyyyyy" look-at="[gps-camera]" scale="40 40 40" gps-entity-place="latitude: 51.0491; longitude: -0.723;"></a-text>
-			<a-box position="0 0 0" rotation="0 45 0" color="#4CC3D9" gps-entity-place="latitude: 51.0491; longitude: -0.723;"></a-box> -->
+			<a-box position="0 0 0" rotation="0 45 0" color="#4CC3D9" gps-entity-place="latitude: 51.0491; longitude: -0.723;"></a-box>
 
 			<!--Taken from "location-based.html" example-->
 			<a-assets>
@@ -32,11 +32,11 @@
 			</a-assets>
 			
 			<a-entity gltf-model="#sword" 
-				  rotation="0 180 0" scale="0.15 0.15 0.15" position="-1 1 -50"
+				  rotation="0 0 0" scale="0.15 0.15 0.15" position="-1 1 -50"
 				  gps-entity-place="longitude: 43.89461382646231; latitude: -79.22547838125688;" 
 				  animation-mixer="loop: repeat"/>
   		
-			<a-camera gps-camera rotation-reader></a-camera>
+			<!-- <a-camera gps-camera rotation-reader></a-camera> -->
 		</a-scene>
 	</body>
 </html>

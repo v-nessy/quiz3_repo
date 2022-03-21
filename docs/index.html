@@ -28,14 +28,15 @@
 
 			<!--Taken from "location-based.html" example-->
 			<a-assets>
-				<a-asset-item id="sword" src="./assets/among_us/scene.gltf">
+				<a-asset-item id="myModel" src="./assets/loz_sword/scene.gltf">
 			</a-assets>
-			<a-entity gltf-model="#sword" 
-				  rotation="35 0 0" scale="0.15 0.15 0.15" position="0 0 -500"
+			<a-entity gltf-model="#myModel" 
+				  rotation="35 0 0" scale="1 1 1" position="0 0 -500"
 				  gps-entity-place="longitude: 43.89461382646231; latitude: -79.22547838125688;" 
 				  animation-mixer="loop: repeat"/>
   		
-			<a-camera gps-camera='simulateLatitude: -79.22547838125688; simulateLongitude: 43.89461382646231' id='camera1' look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1' gps-camera='gpsMinDistance: 5' rotation-reader></a-camera>
+			<!-- <a-camera gps-camera='simulateLatitude: -79.22547838125688; simulateLongitude: 43.89461382646231' id='camera1' look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1' gps-camera='gpsMinDistance: 5' rotation-reader></a-camera> -->
+			<a-camera gps-camera='gpsMinDistance: 10' rotation-reader></a-camera>
 		</a-scene>
 	</body>
 </html>

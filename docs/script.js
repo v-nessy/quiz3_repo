@@ -15,19 +15,19 @@ function staticLoadPlaces() { //define a new function
     ];
 }
 
-function renderPlaces(places) {
-    let scene = document.querySelector('a-scene');
+function renderPlaces(places) { //define new function with the "places" object as a parameter
+    let scene = document.querySelector('a-scene'); //create a new 3D scene from a-frame library
 
-    places.forEach((place) => {
-        let latitude = place.location.lat;
-        let longitude = place.location.lng;
+    places.forEach((place) => { //accesses each element in the places object
+        let latitude = place.location.lat; //set latitude to whatever value "lat" holds
+        let longitude = place.location.lng; //set longitude to whatever value "lng" holds
 
-        let model = document.createElement('a-entity');
-        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-        model.setAttribute('gltf-model', './assets/MyModel/scene.gltf');
-        model.setAttribute('rotation', '0 180 0');
-        model.setAttribute('animation-mixer', '');
-        model.setAttribute('scale', '0.5 0.5 0.5');
+        let model = document.createElement('a-entity'); //create a new model from a-frame library
+        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`); //set model's location to saved gps coordinates
+        model.setAttribute('gltf-model', './assets/MyModel/scene.gltf'); //accesses model's gltf file
+        model.setAttribute('rotation', '0 180 0'); //sets model's y-axis rotaton to 180 degrees
+        model.setAttribute('animation-mixer', ''); //allow model to animate
+        model.setAttribute('scale', '0.5 0.5 0.5'); //scale model down to 50% its original size
 
         model.addEventListener('loaded', () => {
             window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))

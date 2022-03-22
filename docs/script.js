@@ -29,8 +29,8 @@ function renderPlaces(places) { //define new function with the "places" object a
         model.setAttribute('animation-mixer', ''); //allow model to animate
         model.setAttribute('scale', '0.5 0.5 0.5'); //scale model down to 50% its original size
 
-        model.addEventListener('loaded', () => {
-            window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
+        model.addEventListener('loaded', () => { //set up an action for when the page is loaded
+            window.dispatchEvent(new CustomEvent('gps-entity-place-loaded')) //creates a new event called "gps-entity-place-loaded"
         });
 
         scene.appendChild(model);

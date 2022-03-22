@@ -1,12 +1,12 @@
-window.onload = () => {
-  render();
+window.onload = () => { //tells program what to do once window is loaded
+  render(); //runs a function called "render"
 };
 
-const models = [
+const models = [ //creates a constant variable "models"
   {
-    url: './assets/myModel/scene.gltf',
-    scale: '0.5 0.5 0.5',
-    rotation: '0 225 0'
+    url: './assets/myModel/scene.gltf', //access the 3D model's gltf file
+    scale: '0.5 0.5 0.5', //set model's scale to half of original size
+    rotation: '0 225 0' //set model's rotation on y-axis to 225
   },
 ];
 

@@ -33,6 +33,6 @@ function renderPlaces(places) { //define new function with the "places" object a
             window.dispatchEvent(new CustomEvent('gps-entity-place-loaded')) //creates a new event called "gps-entity-place-loaded"
         });
 
-        scene.appendChild(model);
+        scene.appendChild(model);//add model to the scene
     });
 }
